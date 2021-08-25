@@ -5,6 +5,7 @@ nav{
     width: 100%;
     height: 60px;
     background: #344051; 
+    position: fixed;
 }
 .logo{
     color: #fff;
@@ -24,10 +25,43 @@ nav{
     margin-right: 40px;   
     font-size: 16px;
     text-transform: uppercase;
+    animation: kuku 0.4s ease forwards;
+    opacity: 0;
+    
+}
+.menu li:nth-child(2){
+    animation-delay: 0.4s;
+}
+.menu li:nth-child(3){
+    animation-delay: 0.8s;
+}
+.menu li:nth-child(4){
+    animation-delay: 1.2s;
+}
+.menu li:nth-child(5){
+    animation-delay: 1.6s;
+}
+.menu li:nth-child(6){
+    animation-delay: 2s;
+}
+.menu li a{
+    display: inline-block;
+    color: white;
+    transition: all 0.2s;
+    transform: scale(1);
+}
+.menu li a:visited{
+    color: white;
+}
+.menu li a:hover{
+    color: orange;
+}
+.menu li a:active{
+    transform: scale(1.1);
 }
 .main{
     width: 100%;
-    height: calc(100% - 60px);
+    height: 100%;
     background: url(../img/%D0%9F%D0%B0%D1%80%D0%B5%D0%BD%D1%8C.png) 90% 100%/auto 85% no-repeat , url(../img/%D1%84%D0%BE%D0%BD.jpg) center/cover no-repeat;
 }
 .title__container{
@@ -35,6 +69,9 @@ nav{
     margin: 432px 0px 0px 404px;
     color: #2c384a;
     text-align: center;
+    opacity: 0;
+    animation: tittlemove 1s ease forwards;
+    animation-delay: 2.4s;
 }
 .title__container h1{
     font-size: 60px;
@@ -55,21 +92,33 @@ nav{
     font-size: 13 px;
     padding: 0px 16px;
     margin: 58px 14px 0px 14px;
+    transition: all 0.1s;
+    transform: scale(1);
+}
+.title__container input:visited{
+    color: white;
+}
+.title__container input:hover{
+    background: #344051;
+    color: white;
+}
+.title__container input:active{
+    transform: scale(1.1);
 }
 .main1{   
     width: 100%;
-    height: 100%;
+    height: 708px;
     background: url(../img/%D1%84%D0%BE%D1%82%D0%BA%D0%B0.png) 50% 38%/auto no-repeat , url(../img/%D0%A7%D0%B5%D1%80%D1%82%D0%B0%20%D0%B7%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0.png) 50% 18%/100px 5px no-repeat ,   url(../img/%D0%A4%D0%BE%D0%BD%D0%BE%D0%B2%D1%8B%D0%B9%20%D1%81%D0%BB%D0%BE%D0%B9.jpg) center/cover no-repeat;
 }
 .chapter{
     color: #263244;
     font-size: 40px;
     text-transform: uppercase;
-    padding: 100px 0px 0px 855px;
+    padding: 3% 0% 0% 45.5%;
 }
 .text{
     float: left;
-    margin: 446px 600px 170px 600px;
+    margin: 350px 600px 170px 600px;
     color: #263244;
 }
 .text p{
@@ -87,50 +136,146 @@ nav{
     font-size: 11px;
     padding: 5px 8px 5px 34px;
     margin-left: 284px;
-    background: url(../img/%D0%B8%D0%BA%D0%BE%D0%BD%D0%BA%D0%B0.png) 10px 7px/16px 16px no-repeat;
+    transition: all 0.1s;
+    transform: scale(1);
+}
+.text input:visited{
+    color: white;
+}
+.text input:hover{
+    background: #344051;
+    color: white;
+}
+.text input:active{
+    transform: scale(1.1);
 }
 .main2{ 
     width: 100%;
-    height: 100%;
-    background: url(../img/%D0%A7%D0%B5%D1%80%D1%82%D0%B0%20%D0%B7%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0.png) 50% 18%/100px 5px no-repeat , url(../img/%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BE%D1%84%D0%BE%D0%BD.png) 1383px 550px/auto no-repeat , url(../img/%D1%80%D0%B0%D0%BA%D0%B5%D1%82%D0%B0.png) 1098px 550px/auto no-repeat , url(../img/%D0%B7%D0%BD%D0%B0%D0%BA.png) 804px 550px/auto no-repeat , url(../img/%D0%BD%D0%BE%D1%83%D1%82.png) 510px 550px/auto no-repeat , url(../img/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B0%20%D1%84%D0%BE%D0%BD%D0%B0.jpg) center/100% 100% no-repeat;
+    height: 60%;
+    background: url(../img/%D0%A7%D0%B5%D1%80%D1%82%D0%B0%20%D0%B7%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0.png) 50% 29%/100px 5px no-repeat , url(../img/%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BE%D1%84%D0%BE%D0%BD.png) 1383px 310px/auto no-repeat , url(../img/%D1%80%D0%B0%D0%BA%D0%B5%D1%82%D0%B0.png) 1098px 310px/auto no-repeat , url(../img/%D0%B7%D0%BD%D0%B0%D0%BA.png) 804px 310px/auto no-repeat , url(../img/%D0%BD%D0%BE%D1%83%D1%82.png) 510px 310px/auto no-repeat , url(../img/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B0%20%D1%84%D0%BE%D0%BD%D0%B0.jpg) center/100% 100% no-repeat;
 }
 .chapter1{
     color: #263244;
     font-size: 40px;
     text-transform: uppercase;
-    padding: 100px 0px 0px 825px;
+    padding: 1% 0% 0% 43.5%;
 }
 .a{
     float: left;
-    margin-top: 500px;
+    margin-top: 260px;
     margin-left: 495px;
     color: #cf7600;
     font-weight: 700;
     font-size: 14.5px;
+    animation: hello1 2s ease;
+}
+@keyframes hello1{
+    from{
+        opacity: 0;
+        margin-left: 30px;
+    }
+    to{
+        opacity: 1;
+        margin-left: 495px;
+    }
+}
+@keyframes hello2{
+    from{
+        opacity: 0;
+        margin-left: 30px;
+    }
+    to{
+        opacity: 1;
+        margin-left: 210px;
+    }
+}
+@keyframes hello3{
+    from{
+        opacity: 0;
+        margin-left: 30px;
+    }
+    to{
+        opacity: 1;
+        margin-left: 185px;
+    }
+}
+@keyframes hello4{
+    from{
+        opacity: 0;
+        margin-left: 30px;
+    }
+    to{
+        opacity: 1;
+        margin-left: 495px;
+    }
+}
+@keyframes bye1{
+    from{
+        opacity: 0;
+        
+    }
+    to{
+        opacity: 1;
+        
+    }
+}
+@keyframes bye2{
+    from{
+        opacity: 0;
+        
+    }
+    to{
+        opacity: 1;
+        
+    }
+}
+@keyframes bye3{
+    from{
+        opacity: 0;
+        
+    }
+    to{
+        opacity: 1;
+        
+    }
+buy1}
+@keyframes bye4{
+    from{
+        opacity: 0;
+        
+    }
+    to{
+        opacity: 1;
+        
+    }
 }
 .aa{
     float: left;
-    margin-top: 500px;
+    margin-top: 260px;
     margin-left: 210px;
     color: #cf7600;
     font-weight: 700;
     font-size: 14.5px;
+    animation: hello2 2s ease;
 }
 .aaa{
     float:left;
-    margin-top: 500px;
+    margin-top: 260px;
     margin-left: 185px;
     color: #cf7600;
     font-weight: 700;
     font-size: 14.5px;
+    animation: hello3 2s ease;
     
 }
 .aaaa{
-    margin-top: 500px;
+    margin-top: 260px;
     text-indent: 12.7em;
     color: #cf7600;
     font-weight: 700;
     font-size: 14.5px;
+    animation: hello4 2s ease;
+    
 }
 .b{
     float: left;
@@ -139,6 +284,7 @@ nav{
     color: #3f495a;
     font-size: 13px;
     text-align: center;
+    animation: bye1 4.5s ease;
 }
 .bb{
     float: left;
@@ -147,6 +293,7 @@ nav{
     color: #3f495a;
     font-size: 13px;
     text-align: center;
+    animation: bye2 4.5s ease;
 }
 .bbb{
     float: left;
@@ -155,6 +302,7 @@ nav{
     color: #3f495a;
     font-size: 13px;
     text-align: center;
+    animation: bye3 4.5s ease;
 }
 .bbbb{
     float: left;
@@ -163,6 +311,7 @@ nav{
     color: #3f495a;
     font-size: 13px;
     text-align: center;
+    animation: bye4 4.5s ease;
 }
 .main3{
     width: 100%;
@@ -196,6 +345,12 @@ nav{
     color: #3f495a;
     font-size: 13px;
     margin-bottom: 12px;
+}
+.cc a:active{
+    color: #FF0000;
+}
+.cc a:hover{
+    color: #0000FF;
 }
 .ccc{
     margin-top: -100px;
@@ -263,18 +418,20 @@ nav{
 }
 .main4{
     width: 100%;
-    height: 100%;
-    background: url(../img/%D0%BA%D1%83%D0%B1%D0%BE%D0%BA.png) 1400px 550px/auto no-repeat , url(../img/%D0%B3%D0%B0%D0%BB%D0%BE%D1%87%D0%BA%D0%B0.png) 1098px 550px/auto no-repeat , url(../img/%D1%81%D0%BA%D0%BE%D0%B1%D0%BA%D0%B8.png) 770px 550px/auto no-repeat , url(../img/%D1%81%D0%BC%D0%B0%D0%B9%D0%BB.png) 475px 550px/auto no-repeat , url(../img/%D0%A7%D0%B5%D1%80%D1%82%D0%B0%20%D0%B7%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0.png) 50% 168px/100px 5px no-repeat , url(../img/%D1%84%D0%BE%D0%BD1.jpg) center/100% 100% no-repeat;
+    height: 500px;
+    background: url(../img/%D1%86%D0%B2%D0%B5%D1%82%D1%8B.jpg) center/cover no-repeat;
+    background-attachment: fixed;
+   
 }
 .chapter3{
     color: #263244;
     font-size: 40px;
     text-transform: uppercase;
-    padding: 100px 0px 0px 730px;
+    padding: 90px 0px 0px 730px;
 }
 .d{
     float: left;
-    margin-top: 495px;
+    margin-top: 230px;
     margin-left: 475px;
     color: #323e4f;
     font-weight: bold;
@@ -282,7 +439,7 @@ nav{
 }
 .dd{
     float: left;
-    margin-top: 495px;
+    margin-top: 230px;
     margin-left: 245px;
     color: #323e4f;
     font-weight: bold;
@@ -290,7 +447,7 @@ nav{
 }
 .ddd{
     float:left;
-    margin-top: 495px;
+    margin-top: 230px;
     margin-left: 265px;
     color: #323e4f;
     font-weight: bold;
@@ -298,7 +455,7 @@ nav{
     
 }
 .dddd{
-    margin-top: 495px;
+    margin-top: 230px;
     text-indent: 10em;
     color: #323e4f;
     font-weight: bold;
@@ -342,18 +499,18 @@ nav{
 }
 .main5{
     width: 100%;
-    height: 100%;
-    background: url(../img/%D1%87%D0%B5%D0%BB%D0%B8%D0%BA.png) 50% 48%/10% 19% no-repeat , url(../img/%D0%A7%D0%B5%D1%80%D1%82%D0%B0%20%D0%B7%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0.png) 50% 168px/100px 5px no-repeat , url(../img/%D0%A1%D0%BB%D0%BE%D0%B9%205.jpg) center/100% 100% no-repeat;
+    height: 590px;
+    background: url(../img/%D1%87%D0%B5%D0%BB%D0%B8%D0%BA.png) 50% 48%/9% 25% no-repeat , url(../img/%D0%A7%D0%B5%D1%80%D1%82%D0%B0%20%D0%B7%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0.png) 50% 168px/100px 5px no-repeat , url(../img/%D0%A1%D0%BB%D0%BE%D0%B9%205.jpg) center/100% 100% no-repeat;
 }
 .chapter4{
     color: #263244;
     font-size: 40px;
     text-transform: uppercase;
-    padding: 100px 0px 0px 865px;
+    padding: 90px 0px 0px 865px;
 }
 .f{
     float: left;
-    margin: 600px 600px 170px 600px;
+    margin: 330px 600px 170px 600px;
     color: #263244;
 }
 .f h1{
@@ -382,7 +539,7 @@ nav{
 .main6{
     width: 100%;
     height: 1300px;
-    background: url(../img/%D0%A7%D0%B5%D1%80%D1%82%D0%B0%20%D0%B7%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0.png) 50% 168px/100px 5px no-repeat , url(../img/%D1%82%D1%80%D1%83%D0%B1%D0%B0.png) 61% 20%/auto no-repeat , url(../img/%D0%BA%D0%BE%D0%BD%D0%B2%D0%B5%D1%80%D1%82.png) 49% 20%/auto no-repeat , url(../img/%D0%B3%D0%B5%D0%BE.png) 37% 20%/auto no-repeat , url(../img/I%60M%20HERE.png) 49.3% 78.9%/auto no-repeat , url(../img/%D0%AF%20%D0%B7%D0%B4%D0%B5%D1%81%D1%8C.png) no-repeat 49% 80.5%/auto , url(../img/%D0%A1%D0%BB%D0%BE%D0%B9%201.png) 0% 100%/auto no-repeat , url(../img/%D0%9A%D0%B0%D1%80%D1%82%D0%B0%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.png) 0% 90.5%/auto no-repeat , url(../img/%D0%A4%D0%BE%D0%BD2.jpg) 50% 0%/100% 66% no-repeat;
+    background: url(../img/%D0%A7%D0%B5%D1%80%D1%82%D0%B0%20%D0%B7%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0.png) 50% 209px/100px 5px no-repeat , url(../img/%D1%82%D1%80%D1%83%D0%B1%D0%B0.png) 61% 25%/auto no-repeat , url(../img/%D0%BA%D0%BE%D0%BD%D0%B2%D0%B5%D1%80%D1%82.png) 49% 25%/auto no-repeat , url(../img/%D0%B3%D0%B5%D0%BE.png) 37% 25%/auto no-repeat , url(../img/I%60M%20HERE.png) 49.3% 78.9%/auto no-repeat , url(../img/%D0%AF%20%D0%B7%D0%B4%D0%B5%D1%81%D1%8C.png) no-repeat 49% 80.5%/auto , url(../img/%D0%A1%D0%BB%D0%BE%D0%B9%201.png) 0% 100%/auto no-repeat , url(../img/%D0%9A%D0%B0%D1%80%D1%82%D0%B0%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.png) 0% 90.5%/auto no-repeat , url(../img/%D0%A4%D0%BE%D0%BD2.jpg) 50% 0%/100% 66% no-repeat;
 }
 .chapter5{
     color: #fff;
@@ -394,7 +551,7 @@ nav{
     color: #fff;
 }
 .g h1{
-    margin: 3% 0% 0% 35%;
+    margin: 5% 0% 0% 35%;
     font-size: 12px;
     
 }
@@ -441,6 +598,79 @@ nav{
 .g h2{
     font-size: 12px;
     font-weight: 300;
-    margin: 30.7% 0% 0% 42%;
+    margin: 27.2% 0% 0% 42%;
 }
-
+main{
+    width: 100%;
+    height: 100%;
+}
+@keyframes comming{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.logo{
+    animation: comming 2s ease;
+    -webkit-animation: comming 2s ease;
+    -o-animation: comming 2s ease;
+}
+@keyframes kuku{
+    from{
+        opacity: 0;
+        margin-top: -80px;
+    }
+    to{
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+@keyframes tittlemove{
+    from{
+        opacity: 0;
+        margin-left: -500px;
+    }
+    to{
+        opacity: 1;
+        margin-left: 404px;
+    }
+}
+#kubok{
+    margin-top: -120px;
+    margin-left: -1010px;
+}
+#galochka{
+    margin-top: -120px;
+    margin-left: 240px;
+}
+#skobki{
+    margin: -120px 0px 0px 250px;
+}
+#smail{
+    margin: -120px 0px 0px 240px;
+}
+#cherta{
+    margin-top: -210px;
+    margin-left: -560px;
+}
+.loader {
+  border: 16px solid #f3f3f3; 
+  border-top: 16px solid #3498db; 
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  position: relative;
+    top: 90px;
+    left: 50px;
+}
+@keyframes spin{
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+#zagruzka{
+    margin-left: -123px;
+    margin-top: 5px;
+}
